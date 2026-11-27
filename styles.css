@@ -1,4 +1,11 @@
+@font-face {
+    font-family: scribble;
+    src: url(fonts/Comication.ttf);
+}
+
 .hi{
+    font-family: scribble;
+    font-size: xx-large;
     margin-top: 20vh;
     line-height: 2vh;
     text-align: center;
