@@ -1,7 +1,14 @@
+@font-face {
+    font-family: scribble;
+    src: url(fonts/Comication.ttf);
+}
+
 .hi{
+    font-family: scribble;
     margin-top: 20vh;
     line-height: 1.1;
     text-align: center;
+    font-size: xx-large;
 }
 
 body {
@@ -29,7 +36,7 @@ body {
 h2,
 .hi,
 .cards {
-    font-family: Georgia, serif;
+    font-family: scribble, sans-serif;
 }
 
 .cards {
@@ -37,7 +44,7 @@ h2,
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 22px;
     width: min(960px, calc(100% - 40px));
-    margin: 24px auto 64px;
+    margin: 24px auto 20px;
 }
 
 h2 {
@@ -62,12 +69,60 @@ h2::after {
 }
 
 .card {
+    position: relative;
     aspect-ratio: 4 / 3;
+    overflow: hidden;
     border: 1px solid #d2d8d3;
     border-radius: 4px;
+    background: #e9ede9;
+}
+
+.card::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 45%;
+    background: linear-gradient(transparent, rgba(18, 30, 24, 0.78));
+    content: "";
+}
+
+.preview {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card h3 {
+    position: absolute;
+    z-index: 1;
+    right: 12px;
+    bottom: 10px;
+    left: 12px;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.more {
+    display: block;
+    width: fit-content;
+    align-self: center;
+    justify-self: center;
+    color: #23332b;
+    font-family: scribble, sans-serif;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 .check {
+    display: block;
+    box-sizing: border-box;
     width: 100%;
     min-height: 44px;
     margin-top: 8px;
@@ -79,6 +134,8 @@ h2::after {
     font: inherit;
     font-weight: 600;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
 }
 
 .check:hover {
