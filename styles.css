@@ -64,6 +64,17 @@ h2::after {
     content: "";
 }
 
+.about {
+    width: min(680px, calc(100% - 40px));
+    margin: 0 auto 48px;
+}
+
+.about p {
+    margin: 20px 0 0;
+    line-height: 1.7;
+    text-align: center;
+}
+
 .project {
     min-width: 0;
 }
