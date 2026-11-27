@@ -1,0 +1,20 @@
+.hi{
+    margin-top: 20vh;
+    line-height: 2vh;
+    text-align: center;
+}
+
+.gh-chart{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.me{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    border-radius: 50%;
+}
